@@ -4,8 +4,9 @@ module.exports = {
   description: "対戦ゲームAIプログラミングコンテスト",
   themeConfig: {
     nav: [
-      { text: "応募要項", link: "/apply/" },
-      { text: "問題", link: "/question/" }
+      { text: "参加要項", link: "/guide/" },
+      { text: "ルール", link: "/rules/" },
+      { text: "ダウンロード", link: "/downloads/" }
     ],
     search: false
   }

@@ -1,20 +1,19 @@
 ---
 home: true
-actionText: 問題を読む
-actionLink: /question/
+actionText: 参加要項
+actionLink: /guide/
 footer: ©AI-COMP
 ---
 
 ## AI Challenge とは
 
-AI Challenge 2018 は [CODE FESTIVAL](https://www.recruit-jinji.jp/recruitment/code_fes/) に併設されたゲーム AI プログラミングコンテストです！
+AI Challenge 2018 は [CODE FESTIVAL](https://www.recruit-jinji.jp/recruitment/code_fes/) に併設されたゲーム AI プログラミングコンテストです。
 
-ゲーム AI プログラミングコンテストは主催者が提供するゲーム（例えば囲碁や将棋など）に対して、
-参加者がコンピュータプレイヤーを操作する AI プログラムを作ることで競い合うコンテストです。
+ゲーム AI プログラミングコンテストでは、ゲーム（例えば囲碁や将棋など）のコンピュータプレイヤーを操作する AI プログラムを作成し、そのパフォーマンスを競い合います。
 ゲームをプレイする感覚でプログラミングを楽しめるため、初学者向けの教材として注目を浴びています。
 
-本コンテストでは、将棋や囲碁よりもシンプルで同じくらい奥深いルールのゲームを提供しています。
-プログラミングを始めたばかりのあなたでも楽しめる内容となっていますので、是非ご参加ください！
+今回の AI Challenge では、シンプルなルールの 2 人対戦型パズルゲームを出題しています。
+プログラミングを始めたばかりのあなたでも楽しめる内容となっていますので、是非ご参加ください。
 
 ## お知らせ
 
