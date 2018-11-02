@@ -6,3 +6,8 @@ build:
       code: |
         echo "node: $(node -v)"
         echo "yarn: $(yarn -v)"
+  - script:
+      name: yarn install
+      code: |
+        yarn config set cache-folder "$WERCKER_CACHE_DIR/yarn"
+        yarn install

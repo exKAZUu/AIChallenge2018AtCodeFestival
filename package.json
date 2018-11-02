@@ -1,0 +1,13 @@
+{
+  "name": "ai-challenge-2018-at-code-festival",
+  "private": true,
+  "scripts": {
+    "bootstrap": "yarn lerna bootstrap --use-workspaces"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "3.4.3"
+  }
+}
