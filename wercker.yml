@@ -1,0 +1,8 @@
+box: node
+build:
+  steps:
+  - script:
+      name: show environment information
+      code: |
+        echo "node: $(node -v)"
+        echo "yarn: $(yarn -v)"
