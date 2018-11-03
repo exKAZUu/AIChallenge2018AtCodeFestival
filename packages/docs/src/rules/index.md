@@ -99,14 +99,14 @@ Player
 ### 各ターンの入力
 
 <pre>
-A<sub>1,1</sub> A<sub>1,2</sub> A<sub>1,3</sub> A<sub>1,4</sub>
-A<sub>2,1</sub> A<sub>2,2</sub> A<sub>2,3</sub> A<sub>2,4</sub>
-A<sub>3,1</sub> A<sub>3,2</sub> A<sub>3,3</sub> A<sub>3,4</sub>
-A<sub>4,1</sub> A<sub>4,2</sub> A<sub>4,3</sub> A<sub>4,4</sub>
-B<sub>1,1</sub> B<sub>1,2</sub> B<sub>1,3</sub> B<sub>1,4</sub>
-B<sub>2,1</sub> B<sub>2,2</sub> B<sub>2,3</sub> B<sub>2,4</sub>
-B<sub>3,1</sub> B<sub>3,2</sub> B<sub>3,3</sub> B<sub>3,4</sub>
-B<sub>4,1</sub> B<sub>4,2</sub> B<sub>4,3</sub> B<sub>4,4</sub>
+A<sub>1,1</sub> A<sub>1,2</sub> ... A<sub>1,M</sub>
+A<sub>2,1</sub> A<sub>2,2</sub> ... A<sub>2,M</sub>
+:
+A<sub>N,1</sub> A<sub>N,2</sub> ... A<sub>N,M</sub>
+B<sub>1,1</sub> B<sub>1,2</sub> ... B<sub>1,M</sub>
+B<sub>2,1</sub> B<sub>2,2</sub> ... B<sub>2,M</sub>
+:
+B<sub>N,1</sub> B<sub>N,2</sub> ... B<sub>N,M</sub>
 </pre>
 
 - A<sub>i,j</sub>: 自分のボードの i 行目 j 列目のマスの状態
