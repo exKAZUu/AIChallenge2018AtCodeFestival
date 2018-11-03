@@ -2,7 +2,7 @@
 home: true
 actionText: 参加要項
 actionLink: /guide/
-footer: ©AI-COMP
+footer: (C) 2018 Kazunori Sakamoto, Hiroki Sato, Remin Kasahara and Pedro Caldeira
 ---
 
 ## AI Challenge とは
