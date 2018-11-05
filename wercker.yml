@@ -11,3 +11,10 @@ build:
       code: |
         yarn config set cache-folder "$WERCKER_CACHE_DIR/yarn"
         yarn install
+deploy:
+  steps:
+  - script:
+      name: deploy docs
+      code: |
+        cd packages/docs
+        yarn gh-pages
