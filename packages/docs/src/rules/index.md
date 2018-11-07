@@ -3,6 +3,7 @@
 パズルゲーム [2048](<https://ja.wikipedia.org/wiki/2048_(%E3%82%B2%E3%83%BC%E3%83%A0)>) が対戦ゲームになった！
 
 本概要版を2018/11/03 (土)に、ベータ版を2018/11/07 (水)に公開しました。
+概要版からの更新内容はGitHubの[差分表示機能](https://github.com/exKAZUu/AIChallenge2018AtCodeFestival/compare/f223f7b3c1914cdd6d14c0018e6aa6ddb27d4e23...master?expand=1)でご確認いただけます。
 **誤りや改善すべき箇所がございましたら、GitHub上でご連絡いただければ幸いです！**
 正式版を2018/11/10 (土)に公開予定です。
 
