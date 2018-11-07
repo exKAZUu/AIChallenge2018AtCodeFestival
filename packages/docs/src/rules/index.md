@@ -82,8 +82,8 @@ Player
 r c
 </pre>
 
-- r: ゲーム開始時に相手のボードに 2 を置く行
-- c: ゲーム開始時に相手のノードに 2 を置く列
+- r: ゲーム開始時に相手のボードに 2 を置く行 (1 ≦ r ≦ 5)
+- c: ゲーム開始時に相手のノードに 2 を置く列 (1 ≦ c ≦ 5)
 
 ### 各ターンの入力
 
@@ -106,7 +106,7 @@ B<sub>5,1</sub> B<sub>5,2</sub> ... B<sub>5,5</sub>
 ### 各ターンの出力
 
 <pre>
-Command M r<sub>1</sub> c<sub>1</sub> v<sub>1</sub> r<sub>2</sub> c<sub>2</sub> v<sub>2</sub> ... r<sub>M</sub> c<sub>M</sub> v<sub>M</sub>
+Command M V r<sub>1</sub> c<sub>1</sub> r<sub>2</sub> c<sub>2</sub> ... r<sub>M</sub> c<sub>M</sub>
 </pre>
 
 - Command: ボードをスライドする向き
@@ -115,9 +115,9 @@ Command M r<sub>1</sub> c<sub>1</sub> v<sub>1</sub> r<sub>2</sub> c<sub>2</sub> 
   - `D`: 下
   - `L`: 左
 - M: 相手のボードに置く数の個数
-- r<sub>i</sub>: i 個目の数を置く行
-- c<sub>i</sub>: i 個目の数を置く列
-- v<sub>i</sub>: i 個目の数 2<sup>v<sub>i</sub></sup>を表す値
+- V: ボードに置く数 2<sup>V</sup>を表す整数値 (1 ≦ V)
+- r<sub>i</sub>: i 個目の数を置く行 (1 ≦ r<sub>i</sub> ≦ 5)
+- c<sub>i</sub>: i 個目の数を置く列 (1 ≦ c<sub>i</sub> ≦ 5)
 
 出力の途中に改行を挿入しないように注意してください。
 
