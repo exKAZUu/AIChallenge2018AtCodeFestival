@@ -4,7 +4,7 @@
 
 本概要版を 2018/11/03 (土)に、ベータ版を 2018/11/07 (水)に公開しました。
 概要版からの更新内容は GitHub の[差分表示機能](https://github.com/exKAZUu/AIChallenge2018AtCodeFestival/compare/f223f7b3c1914cdd6d14c0018e6aa6ddb27d4e23...master?expand=1)でご確認いただけます。
-**誤りや改善すべき箇所がございましたら、GitHub 上でご連絡いただければ幸いです！**
+**誤りや改善すべき箇所がございましたら、[GitHub](https://github.com/exKAZUu/AIChallenge2018AtCodeFestival) 上でご連絡いただければ幸いです！**
 正式版を 2018/11/10 (土)に公開予定です。
 
 ## 基本ルール
