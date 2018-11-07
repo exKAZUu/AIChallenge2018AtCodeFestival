@@ -88,14 +88,14 @@ r c
 ### 各ターンの入力
 
 <pre>
-A<sub>1,1</sub> A<sub>1,2</sub> ... A<sub>1,M</sub>
-A<sub>2,1</sub> A<sub>2,2</sub> ... A<sub>2,M</sub>
+A<sub>1,1</sub> A<sub>1,2</sub> ... A<sub>1,5</sub>
+A<sub>2,1</sub> A<sub>2,2</sub> ... A<sub>2,5</sub>
 :
-A<sub>N,1</sub> A<sub>N,2</sub> ... A<sub>N,M</sub>
-B<sub>1,1</sub> B<sub>1,2</sub> ... B<sub>1,M</sub>
-B<sub>2,1</sub> B<sub>2,2</sub> ... B<sub>2,M</sub>
+A<sub>5,1</sub> A<sub>5,2</sub> ... A<sub>5,5</sub>
+B<sub>1,1</sub> B<sub>1,2</sub> ... B<sub>1,5</sub>
+B<sub>2,1</sub> B<sub>2,2</sub> ... B<sub>2,5</sub>
 :
-B<sub>N,1</sub> B<sub>N,2</sub> ... B<sub>N,M</sub>
+B<sub>5,1</sub> B<sub>5,2</sub> ... B<sub>5,5</sub>
 </pre>
 
 - A<sub>i,j</sub>: 自分のボードの i 行目 j 列目のマスの状態
