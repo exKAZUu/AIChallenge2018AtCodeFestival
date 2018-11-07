@@ -17,4 +17,5 @@ AI Challenge 2018 は [CODE FESTIVAL](https://www.recruit-jinji.jp/recruitment/c
 
 ## お知らせ
 
+- **2018/11/07 (水)** ゲームルールのベータ版を公開しました。ゲームソフトウェアも本日公開予定です。
 - **2018/11/03 (土)** 本サイトを公開しました。
