@@ -30,7 +30,7 @@
 
 ### 使用言語
 
-予選および決勝戦における使用可能なプログラミング言語は、 https://github.com/exKAZUu/ai-container で公開している Docker イメージ内で使えるあらゆる言語です。
+予選および決勝戦における使用可能なプログラミング言語は、 [https://github.com/exKAZUu/ai-container](https://github.com/exKAZUu/ai-container) で公開している Docker イメージ内で使えるあらゆる言語です。
 具体的には、以下の言語が使用可能です。
 
 - **(TBD)**
