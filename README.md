@@ -2,6 +2,10 @@
 
 [![wercker status](https://app.wercker.com/status/7dd58112b3c4214e3e500d1f1ae12848/m/master 'wercker status')](https://app.wercker.com/project/byKey/7dd58112b3c4214e3e500d1f1ae12848)
 
+## Game Software
+
+Please see [Battle2048](./Battle2048).
+
 ## License
 
 This work is applied the Apache License Version 2.0.
