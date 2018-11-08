@@ -9,7 +9,7 @@ cd Battle2048
 mvn exec:java
 ```
 
-## How to Package Game Software
+## How to Package Game Software from Source Code
 
 ```
 cd Battle2048
