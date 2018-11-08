@@ -31,6 +31,5 @@ AI プログラムおよびワーキングディレクトリはそれぞれ 2 �
 
 ## サンプルプログラム
 
-SampleAI ディレクトリにサンプルプログラムが入っています。AI を作成する際の参考にしてください。
-AI の入出力形式についてはゲームルールをご参照ください。
-https://www.exkazuu.net/AIChallenge2018AtCodeFestival/rules/
+SampleAI ディレクトリにサンプルプログラムが入っています。AI を作成する際の参考にしてください
+AI の入出力形式については(ゲームルール)[https://www.exkazuu.net/AIChallenge2018AtCodeFestival/rules/]をご参照ください。
