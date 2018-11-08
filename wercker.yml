@@ -17,4 +17,4 @@ deploy:
         name: deploy docs
         code: |
           cd packages/docs
-          yarn gh-pages
+          # yarn gh-pages
