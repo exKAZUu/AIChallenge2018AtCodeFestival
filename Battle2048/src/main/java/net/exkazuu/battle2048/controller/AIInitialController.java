@@ -14,6 +14,9 @@ public class AIInitialController extends AIController {
 
   @Override
   protected void runPreProcessing(Game game) {
+    Logger.getInstance().outputLog("AI" + _index + ">>Writing to stdin, waiting for stdout", Logger.LOG_LEVEL_DETAILS);
+    Logger.getInstance().outputLog(String.valueOf(_index), Logger.LOG_LEVEL_DETAILS);
+
     _line = "";
   }
 
@@ -30,7 +33,7 @@ public class AIInitialController extends AIController {
   @Override
   protected String[] runPostProcessing(Game game) {
     if (!_com.getErrorLog().isEmpty()) {
-      Logger.getInstance().outputLog("AI" + _index + ">>STDERR: " + _com.getErrorLog(), Logger.LOG_LEVEL_DETAILS);
+      Logger.getInstance().outputLog("AI" + _index + ">>STDERR: " + _com.getErrorLog(), Logger.LOG_LEVEL_STATUS);
     }
     Logger.getInstance().outputLog("AI" + _index + ">>STDOUT: " + _line, Logger.LOG_LEVEL_DETAILS);
     return !Strings.isNullOrEmpty(_line) ? _line.trim().split(" ") : new String[0];

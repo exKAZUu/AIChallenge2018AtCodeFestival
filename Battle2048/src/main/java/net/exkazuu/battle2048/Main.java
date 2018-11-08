@@ -1,6 +1,5 @@
 package net.exkazuu.battle2048;
 
-import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 import net.exkazuu.battle2048.controller.*;
 import net.exkazuu.battle2048.game.Game;
@@ -10,19 +9,21 @@ import net.exkazuu.battle2048.util.Logger;
 import net.exkazuu.gameaiarena.player.ExternalComputerPlayer;
 import org.apache.commons.cli.*;
 
-import java.io.*;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Main {
-  private static String HELP = "h";
-  private static String LOG_LEVEL = "l";
-  private static String SILENT = "s";
-  private static String EXTERNAL_AI_PROGRAM = "a";
-  private static String WORKING_DIR = "w";
-  private static String DEFAULT_COMMAND = "java SampleAI";
-  private static String DEFAULT_WORK_DIR = "./defaultai";
+  private static final String HELP = "h";
+  private static final String LOGGING = "l";
+  private static final String LOGGING_DETAILED = "ll";
+  private static final String EXTERNAL_AI_PROGRAM = "a";
+  private static final String WORKING_DIR = "w";
+  private static final String REPLAY_OUTPUT_NAME = "o";
+  private static final String DEFAULT_COMMAND = "java SampleAI";
+  private static final String DEFAULT_WORK_DIR = "./defaultai";
+  private static final String DEFAULT_RECORD_FILENAME = "game.log";
 
   public static void main(String[] args) {
     Options options = buildOptions();
@@ -68,21 +69,18 @@ public class Main {
       mainCtrls.add(new RandomAIMainController(i));
     }
 
-    int tmpLogLevel = 2;
-    if (cl.hasOption(LOG_LEVEL)) {
-      try {
-        tmpLogLevel = Integer.parseInt(cl.getOptionValue(LOG_LEVEL, "2"));
-      } catch (Exception e) {
-      }
-    }
-    int logLevel = tmpLogLevel;
-    boolean silent = cl.hasOption(SILENT);
-    Logger.getInstance().initialize(logLevel, silent);
+    int logLevel = Logger.LOG_LEVEL_RESULT;
+    if (cl.hasOption(LOGGING)) logLevel = Logger.LOG_LEVEL_STATUS;
+    if (cl.hasOption(LOGGING_DETAILED)) logLevel = Logger.LOG_LEVEL_DETAILS;
+    Logger.getInstance().initialize(logLevel, false);
 
-    GameResult result = new GameManager(initCtrls, mainCtrls).start();
+    GameManager gameManager = new GameManager(initCtrls, mainCtrls);
+    GameResult result = gameManager.start();
     System.out.println(result);
 
     Logger.getInstance().finalize();
+
+    gameManager.recorder.writeReplayLog(cl.getOptionValue("o", DEFAULT_RECORD_FILENAME));
 
     for (int i = 0; i < 2; i++) {
       initCtrls.get(i).release();
@@ -93,10 +91,11 @@ public class Main {
   private static Options buildOptions() {
     return new Options()
       .addOption(HELP, false, "Print this help.")
-      .addOption(LOG_LEVEL, true, "Specify the log level. 0: Show only result, 1: Show game status and 2: Show detailed logs (defaults to 2)")
-      .addOption(SILENT, false, "Disable writing a log file.")
+      .addOption(LOGGING, false, "Enable writing logs to stdout and file.")
+      .addOption(LOGGING_DETAILED, false, "Enable writing detailed logs to stdout and file.")
       .addOption(EXTERNAL_AI_PROGRAM, true, "Set 0-2 external AI programs.")
-      .addOption(WORKING_DIR, true, "Set working directories for external AI programs.");
+      .addOption(WORKING_DIR, true, "Set working directories for external AI programs.")
+      .addOption(REPLAY_OUTPUT_NAME, true, "Set output file name for a replay.");
   }
 
   private static void printHelp(Options options) {

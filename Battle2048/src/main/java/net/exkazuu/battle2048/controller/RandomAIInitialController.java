@@ -15,6 +15,9 @@ public class RandomAIInitialController extends AIController {
 
   @Override
   protected void runPreProcessing(Game game) {
+    Logger.getInstance().outputLog("AI" + _index + ">>Writing to stdin, waiting for stdout", Logger.LOG_LEVEL_DETAILS);
+    Logger.getInstance().outputLog(String.valueOf(_index), Logger.LOG_LEVEL_DETAILS);
+
     _line = "";
   }
 
