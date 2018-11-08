@@ -18,16 +18,20 @@ public class GameManager {
   private final List<AIController> _initCtrls;
   private final List<AIController> _mainCtrls;
 
+  public final GameRecorder recorder;
+
   public GameManager(List<AIController> initCtrls, List<AIController> mainCtrls) {
     _game = new Game();
     _initCtrls = initCtrls;
     _mainCtrls = mainCtrls;
+    recorder = new GameRecorder();
   }
 
   public GameResult start() {
     for (int playerIndex = 0; playerIndex < _initCtrls.size(); playerIndex++) {
       AIController ctlr = _initCtrls.get(playerIndex);
       String[] result = ctlr.run(_game);
+      this.recorder.add(new TurnRecord(playerIndex).setAIOutput(result));
       if (result.length != 2) {
         return killController(DefeatReason.PRESENTATION_ERROR_AT_INIT, playerIndex);
       }
@@ -48,6 +52,8 @@ public class GameManager {
       for (int playerIndex = 0; playerIndex < _mainCtrls.size(); playerIndex++) {
         AIController ctlr = _mainCtrls.get(playerIndex);
         String[] result = ctlr.run(_game);
+        this.recorder.add(new TurnRecord(playerIndex).setAIInput(_game, playerIndex).setAIOutput(result));
+
         if (result.length < 5) {
           return killController(DefeatReason.PRESENTATION_ERROR_AT_MAIN_OR_ATTACK, playerIndex);
         }
@@ -87,6 +93,7 @@ public class GameManager {
     }
     return _game.judge();
   }
+
 
   private GameResult killController(DefeatReason reason, int playerIndex) {
     _initCtrls.get(playerIndex).release();

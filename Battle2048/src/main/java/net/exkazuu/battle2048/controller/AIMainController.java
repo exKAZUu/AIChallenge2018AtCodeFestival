@@ -5,12 +5,27 @@ import net.exkazuu.battle2048.game.Game;
 import net.exkazuu.battle2048.util.Logger;
 import net.exkazuu.gameaiarena.player.ExternalComputerPlayer;
 
+import java.io.*;
+
 public class AIMainController extends AIController {
   private String _line;
   private String _input;
+  private BufferedReader errorReader;
 
   public AIMainController(ExternalComputerPlayer com, int index) {
     super(com, index);
+
+    try {
+      final PipedOutputStream pipedOutputStream = new PipedOutputStream();
+      com.addErrorLogStream(new PrintStream(pipedOutputStream));
+
+      final PipedInputStream pipedInputStream = new PipedInputStream();
+      pipedOutputStream.connect(pipedInputStream);
+
+      errorReader = new BufferedReader(new InputStreamReader(pipedInputStream));
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
   }
 
   @Override
@@ -34,8 +49,13 @@ public class AIMainController extends AIController {
 
   @Override
   protected String[] runPostProcessing(Game game) {
-    if (!_com.getErrorLog().isEmpty()) {
-      Logger.getInstance().outputLog("AI" + _index + ">>STDERR: " + _com.getErrorLog(), Logger.LOG_LEVEL_DETAILS);
+    try {
+      String line;
+      while (errorReader.ready() && (line = errorReader.readLine()) != null) {
+        Logger.getInstance().outputLog("AI" + _index + ">>STDERR: " + line, Logger.LOG_LEVEL_STATUS);
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
     }
     Logger.getInstance().outputLog("AI" + _index + ">>STDOUT: " + _line, Logger.LOG_LEVEL_DETAILS);
     return !Strings.isNullOrEmpty(_line) ? _line.trim().split(" ") : new String[0];

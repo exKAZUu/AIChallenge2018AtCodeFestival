@@ -17,6 +17,7 @@ AI Challenge 2018 は [CODE FESTIVAL](https://www.recruit-jinji.jp/recruitment/c
 
 ## お知らせ
 
+- **2018/11/08 (木) 23:30** [ゲームビューア（ベータ版）](https://www.exkazuu.net/GameViewerForAIChallenge2018AtCodeFestival/)を公開いたしました。これに合わせ、ゲームソフトウェアも更新いたしました。
 - **2018/11/08 (木) 11:50** [ゲームソフトウェア（ベータ版）](https://github.com/exKAZUu/AIChallenge2018AtCodeFestival/releases)を公開いたしました。
 - **2018/11/08 (木) 1:00** フィードバックをくださった皆様、ありがとうございます。いただいたご意見をもとにゲームルールを更新いたしました。
   また、ゲームソフトウェアの開発が延びており、本日午前中の公開を予定しております。ご不便をおかけして申し訳ございません。
