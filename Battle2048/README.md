@@ -17,11 +17,13 @@
     cd SampleAI
     g++ random.cpp -o a.out -O2 --std=c++17
     cd ..
-    java -jar Battle2048.jar -a "./SampleAI/a.out" -w "./SampleAI"
+    java -jar Battle2048.jar -a "./SampleAI/a.out"
+    # または
+    java -jar Battle2048.jar -a "./a.out" -w "./SampleAI"
 
 AI プログラムおよびワーキングディレクトリはそれぞれ 2 つまで指定できます。
 
-    java -jar Battle2048.jar -a "./SampleAI/a.out" -w "./SampleAI" -a "./SampleAI/a.out" -w "./SampleAI"
+    java -jar Battle2048.jar -a "./a.out" -w "./SampleAI" -a "./a.out" -w "./SampleAI"
 
 その他のオプションについては以下のコマンドで表示されるヘルプをご参照ください。
 
