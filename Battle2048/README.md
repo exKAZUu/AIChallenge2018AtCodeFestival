@@ -15,7 +15,7 @@
 対戦相手にはデフォルト AI が使用されます。
 
     cd SampleAI
-    g++ random.cpp -o a.out
+    g++ random.cpp -o a.out -O2 --std=c++17
     cd ..
     java -jar Battle2048.jar -a "./SampleAI/a.out" -w "./SampleAI"
 
