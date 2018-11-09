@@ -40,7 +40,7 @@ AI プログラムおよびワーキングディレクトリはそれぞれ 2 �
 { "winner": 1, "reasonOfOpponentDefeat": "PRESENTATION_ERROR_AT_MAIN_OR_ATTACK" }
 ```
 
-`winner` は勝利したプレイヤーの番号（一人目なら`0`、二人目なら`1`）、`reasonOfOpponentDefeat`は勝利した理由です。
+`winner` は勝利したプレイヤーの番号（一人目なら`0`、二人目なら`1`）、`reasonOfOpponentDefeat`は勝利した理由（相手が敗北した理由）です。
 
 |reasonOfOpponentDefeat|意味|
 |---|---|
