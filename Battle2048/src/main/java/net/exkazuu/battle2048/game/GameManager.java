@@ -81,7 +81,7 @@ public class GameManager {
             int x = Integer.parseInt(result[i + 4]) - 1;
             ps.add(new Point2(x, y));
           } catch (Exception e) {
-            return killController(DefeatReason.PRESENTATION_ERROR_AT_MAIN_OR_ATTACK, i);
+            return killController(DefeatReason.PRESENTATION_ERROR_AT_MAIN_OR_ATTACK, playerIndex);
           }
         }
 
