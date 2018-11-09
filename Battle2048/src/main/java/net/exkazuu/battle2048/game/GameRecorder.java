@@ -34,4 +34,8 @@ public class GameRecorder {
   public String getReplayLog() throws JsonProcessingException {
     return objectMapper.writeValueAsString(replayLog);
   }
+
+  public List<TurnRecord> getReplayList() {
+    return replayLog;
+  }
 }

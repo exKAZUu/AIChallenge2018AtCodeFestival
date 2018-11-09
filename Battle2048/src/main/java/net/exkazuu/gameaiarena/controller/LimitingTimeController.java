@@ -38,7 +38,7 @@ public class LimitingTimeController<Arg, Result extends Serializable>
 
     lastConsumedMillisecond = (int)(System.currentTimeMillis() - currentTimeMillis);
     if (lastConsumedMillisecond > maxMillisecond || thread.isAlive()) {
-      System.err.println("Terminated the thread because time was exceeded.");
+      // System.err.println("Terminated the thread because time was exceeded.");
       thread.stop();
       release();
       timeExceeded = true;

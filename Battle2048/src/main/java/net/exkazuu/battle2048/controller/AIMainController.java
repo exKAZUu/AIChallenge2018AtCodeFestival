@@ -30,7 +30,7 @@ public class AIMainController extends AIController {
 
   @Override
   protected void runPreProcessing(Game game) {
-    _input = game.getMyBoard(_index) + "\n" + game.getOpponentBoard(_index);
+    _input = game.generateMainInput(_index);
     Logger.getInstance().outputLog("AI" + _index + ">>Writing to stdin, waiting for stdout", Logger.LOG_LEVEL_DETAILS);
     Logger.getInstance().outputLog(_input, Logger.LOG_LEVEL_DETAILS);
 
