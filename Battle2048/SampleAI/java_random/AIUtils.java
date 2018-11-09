@@ -1,5 +1,3 @@
-package net.exkazuu.sampleai;
-
 import java.util.Scanner;
 
 public class AIUtils {

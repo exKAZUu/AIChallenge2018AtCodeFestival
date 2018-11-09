@@ -123,11 +123,15 @@ int main(int argc, char* argv[]) {
 
     Board me, op;
     while (true) {
+        int turn, timeleft, myscore, opscore;
+        scanf("%d %d %d %d", &turn, &timeleft, &myscore, &opscore);
         me.reload();
         op.reload();
 
-        while(true) {
-            int dir = prng.rnd() % 4;
+        int s = prng.rnd() % 4;
+        bool wrote = false;
+        for (int i = 0; i< 4; i++) {
+            int dir = (s + i) % 4;
             if(me.movable(dir)) {
                 int place = me.move(dir);
                 int px, py;
@@ -137,8 +141,13 @@ int main(int argc, char* argv[]) {
                 } while(op.board[px][py] != 0);
                 printf("%c 1 %d %d %d\n", i2c[dir], place+1, px+1, py+1);
                 fflush(stdout);
+                wrote = true;
                 break;
             }
+        }
+        if (!wrote) {
+            printf("die.\n");
+            fflush(stdout);
         }
     }
 

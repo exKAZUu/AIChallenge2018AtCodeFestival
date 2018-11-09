@@ -1,5 +1,3 @@
-package net.exkazuu.sampleai;
-
 import java.util.Collections;
 import java.util.EnumMap;
 import java.util.List;

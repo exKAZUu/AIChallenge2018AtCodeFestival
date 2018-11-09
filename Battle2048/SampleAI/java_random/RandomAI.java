@@ -1,5 +1,3 @@
-package net.exkazuu.sampleai;
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -23,14 +21,11 @@ public class RandomAI {
         int randomCol = rnd.nextInt(Board.NB_COLS) + 1;
         System.out.println(randomRow + " " + randomCol);
 
-        int currentTurn = 0;
-        int myScore = 0;
-        int opponentScore = 0;
-
         while (true) {
-            currentTurn = scanner.nextInt();
-            myScore = scanner.nextInt();
-            opponentScore = scanner.nextInt();
+            int currentTurn = scanner.nextInt();
+            int timeLeft = scanner.nextInt();
+            int myScore = scanner.nextInt();
+            int opponentScore = scanner.nextInt();
             myBoard = AIUtils.parseBoard(scanner);
             opponentBoard = AIUtils.parseBoard(scanner);
 
