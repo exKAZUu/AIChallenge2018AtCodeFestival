@@ -95,6 +95,24 @@ class BoardTest {
   }
 
   @Test
+  void testCanMove() {
+    int[][] values = {
+      {1, 3, 1, 2, 3},
+      {4, 5, 6, 4, 1},
+      {2, 7, 8, 1, 3},
+      {1, 5, 6, 5, 2},
+      {5, 2, 4, 3, 4}
+    };
+    Board board = new Board(5, 5);
+    for (int x = 0; x < 5; x++) {
+      for (int y = 0; y < 5; y++) {
+        board.setExponent(values[y][x], new Point2(x, y));
+      }
+    }
+    assert(!board.canMove());
+  }
+
+  @Test
   void tryImpossibleMove() {
     Board board = new Board(3, 3);
     for (int x = 0; x < 3; x++) {

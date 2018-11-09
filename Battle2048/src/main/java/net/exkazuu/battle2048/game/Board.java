@@ -15,6 +15,7 @@ public class Board {
    * It contains 0 (meaning an empty) or an exponent (n in 2^n).
    */
   private int[][] _exponents;
+  private int[][] _exponentsCopy;
 
   public Board(int width, int height) {
     this.width = width;
@@ -22,6 +23,7 @@ public class Board {
     _score = 0;
 
     _exponents = new int[height][width];
+    _exponentsCopy = new int[height][width];
     for (int y = 0; y < height; y++) {
       for (int x = 0; x < width; x++) {
         _exponents[y][x] = 0;
@@ -76,14 +78,26 @@ public class Board {
     return simulateMove(direction) != -1;
   }
 
+  public boolean canMove() {
+    for (Direction4 d : Direction4.values()) {
+      if (canMove(d)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   public int simulateMove(Direction4 direction) {
-    int[][] exponentCopy = _exponents.clone();
     int scoreCopy = _score;
-    for (int i = 0; i < exponentCopy.length; i++) {
-      exponentCopy[i] = exponentCopy[i].clone();
+    for (int y = 0; y < height; y++) {
+      for (int x = 0; x < width; x++) {
+        _exponentsCopy[y][x] = _exponents[y][x];
+      }
     }
     int result = move(direction);
-    _exponents = exponentCopy;
+    int[][] tmp = _exponents;
+    _exponents = _exponentsCopy;
+    _exponentsCopy = tmp;
     _score = scoreCopy;
     return result;
   }

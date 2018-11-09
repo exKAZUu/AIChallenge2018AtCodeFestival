@@ -11,7 +11,7 @@ public class TurnRecord {
   }
 
   public TurnRecord setAIInput(final Game game, final int playerIndex) {
-    this.AIInput = game.getMyBoard(playerIndex) + "\n" + game.getOpponentBoard(playerIndex);
+    this.AIInput = game.generateMainInput(playerIndex);
     return this;
   }
 

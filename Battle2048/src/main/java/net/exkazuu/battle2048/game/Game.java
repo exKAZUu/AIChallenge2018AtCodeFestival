@@ -12,6 +12,7 @@ public class Game {
 
   private final Board[] _boards;
   private int _turn;
+  private int[] _timeLeft;
   private GameResult _result;
 
   public Game() {
@@ -19,6 +20,7 @@ public class Game {
       new Board(BOARD_NUM_COLS, BOARD_NUM_ROWS),
       new Board(BOARD_NUM_COLS, BOARD_NUM_ROWS),
     };
+    _timeLeft = new int[2];
   }
 
   public DefeatReason advanceInitialPhase(int playerIndex, Point2 p) {
@@ -78,6 +80,32 @@ public class Game {
 
   public GameResult getGameResult() {
     return _result;
+  }
+
+  public int getTurn() {
+    return _turn;
+  }
+
+  public int getMyTimeLeft(int playerIndex) {
+    return _timeLeft[playerIndex];
+  }
+
+  public void setMyTimeLeft(int playerIndex, int value) {
+    _timeLeft[playerIndex] = value;
+  }
+
+  public String generateMainInput(int playerIndex) {
+    return String.valueOf(getTurn() / 2 + 1) +
+      ' ' +
+      getMyTimeLeft(playerIndex) +
+      ' ' +
+      getMyBoard(playerIndex).getScore() +
+      ' ' +
+      getOpponentBoard(playerIndex).getScore() +
+      '\n' +
+      getMyBoard(playerIndex) +
+      '\n' +
+      getOpponentBoard(playerIndex);
   }
 
   public GameResult lose(int playerIndex, DefeatReason reason) {

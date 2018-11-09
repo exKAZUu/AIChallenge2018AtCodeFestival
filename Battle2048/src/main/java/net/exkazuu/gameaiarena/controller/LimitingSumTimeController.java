@@ -5,7 +5,7 @@ import net.exkazuu.gameaiarena.controller.Controller;
 import java.io.Serializable;
 
 public class LimitingSumTimeController<Arg, Result extends Serializable>
-    extends net.exkazuu.gameaiarena.controller.DefaultController<Arg, Result> {
+  extends net.exkazuu.gameaiarena.controller.DefaultController<Arg, Result> {
 
   private final int availableMillisecond;
   private int restExceededMillisecond;
@@ -41,16 +41,16 @@ public class LimitingSumTimeController<Arg, Result extends Serializable>
       e.printStackTrace();
     }
 
-    lastConsumedMillisecond = (int)(System.currentTimeMillis() - currentTimeMillis);
+    lastConsumedMillisecond = (int) (System.currentTimeMillis() - currentTimeMillis);
     if (lastConsumedMillisecond > availableMillisecond) {
       restExceededMillisecond -= lastConsumedMillisecond - availableMillisecond;
-      System.err.println("Time was exceeded.");
-      System.err.println("- Consumed milliseconds in this turn: " + lastConsumedMillisecond);
-      System.err.println("- Available milliseconds in this turn: " + availableMillisecond);
-      System.err.println("- All remaining available milliseconds: " + restExceededMillisecond);
+      // System.err.println("Time was exceeded.");
+      // System.err.println("- Consumed milliseconds in this turn: " + lastConsumedMillisecond);
+      // System.err.println("- Available milliseconds in this turn: " + availableMillisecond);
+      // System.err.println("- All remaining available milliseconds: " + restExceededMillisecond);
     }
     if (restExceededMillisecond <= 0 || thread.isAlive()) {
-      System.err.println("Terminating the thread because time was exceeded.");
+      // System.err.println("Terminating the thread because time was exceeded.");
       thread.stop();
       release();
       timeExceeded = true;

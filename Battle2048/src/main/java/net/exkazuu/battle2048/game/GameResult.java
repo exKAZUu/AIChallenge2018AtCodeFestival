@@ -8,8 +8,4 @@ public class GameResult {
     this.winner = winner;
     this.defeatReason = defeatReason;
   }
-
-  public String toString() {
-    return "{ \"winner\": " + winner + ", \"reasonOfOpponentDefeat\": \"" + defeatReason + "\" }";
-  }
 }

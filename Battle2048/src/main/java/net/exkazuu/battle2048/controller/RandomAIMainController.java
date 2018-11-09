@@ -21,7 +21,7 @@ public class RandomAIMainController extends AIController {
 
   @Override
   protected void runPreProcessing(Game game) {
-    String input = game.getMyBoard(_index) + "\n" + game.getOpponentBoard(_index);
+    String input = game.generateMainInput(_index);
     Logger.getInstance().outputLog("AI" + _index + ">>Writing to stdin, waiting for stdout", Logger.LOG_LEVEL_DETAILS);
     Logger.getInstance().outputLog(input, Logger.LOG_LEVEL_DETAILS);
 
