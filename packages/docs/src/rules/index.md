@@ -2,10 +2,9 @@
 
 パズルゲーム [2048](<https://ja.wikipedia.org/wiki/2048_(%E3%82%B2%E3%83%BC%E3%83%A0)>) が対戦ゲームになった！
 
-本概要版を 2018/11/03 (土)に、ベータ版を 2018/11/07 (水)に公開しました。
-概要版からの更新内容は GitHub の[差分表示機能](https://github.com/exKAZUu/AIChallenge2018AtCodeFestival/compare/f223f7b3c1914cdd6d14c0018e6aa6ddb27d4e23...master?expand=1)でご確認いただけます。
+本概要版を 2018/11/03 (土)に、ベータ版を 2018/11/07 (水)に公開しました。正式版を 2018/11/10 (土)に公開しました。
+ベータ版からの更新内容は GitHub の[差分表示機能](https://github.com/exKAZUu/AIChallenge2018AtCodeFestival/compare/7d601f23273478bb87a5eca2da4affd4dfd4d120...master?expand=1)でご確認いただけます。
 **誤りや改善すべき箇所がございましたら、[GitHub](https://github.com/exKAZUu/AIChallenge2018AtCodeFestival) 上でご連絡いただければ幸いです！**
-正式版を 2018/11/10 (土)に公開予定です。
 
 ## 基本ルール
 
@@ -88,6 +87,7 @@ r c
 ### 各ターンの入力
 
 <pre>
+Turn TimeLeft ScoreOfTurnPlayer ScoreOfOtherPlayer
 A<sub>1,1</sub> A<sub>1,2</sub> ... A<sub>1,5</sub>
 A<sub>2,1</sub> A<sub>2,2</sub> ... A<sub>2,5</sub>
 :
@@ -98,6 +98,10 @@ B<sub>2,1</sub> B<sub>2,2</sub> ... B<sub>2,5</sub>
 B<sub>5,1</sub> B<sub>5,2</sub> ... B<sub>5,5</sub>
 </pre>
 
+- Turn: ターン数（2 プレイヤーが行動すると、ターン数が 1 増える。）
+- TimeLeft: ターンプレイヤーの残り実行時間（ミリ秒）（100 秒 - 既に消費した実行時間）
+- ScoreOfTurnPlayer: ターンプレイヤーのスコア
+- ScoreOfOtherPlayer: ターンプレイヤーではないプレイヤーのスコア
 - A<sub>i,j</sub>: 自分のボードの i 行目 j 列目のマスの状態
 - B<sub>i,j</sub>: 相手のボードの i 行目 j 列目のマスの状態
   - `0` のとき、そのマスは空である。
@@ -133,6 +137,7 @@ Command M V r<sub>1</sub> c<sub>1</sub> r<sub>2</sub> c<sub>2</sub> ... r<sub>M<
 以下の条件のどちらかを満たすことで、ゲームに勝利できます。
 
 1. 対戦相手のプレイヤーのターンに、以下の条件のいずれかを満たした場合
+   - 対戦相手のターン開始時において、対戦相手がどんな行動を取ってもボードの状態を変化させられない場合
    - 対戦相手のメインフェーズにおいて、対戦相手が行動してもボードの状態が変化しなかった場合
    - 対戦相手の AI プログラムが、ゲームからの入力を受け取らなかった場合
    - 対戦相手の AI プログラムの出力が、定められたフォーマットもしくは制約を満たさなかった場合
