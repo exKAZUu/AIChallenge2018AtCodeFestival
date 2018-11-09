@@ -33,6 +33,28 @@ AI プログラムおよびワーキングディレクトリはそれぞれ 2 �
 
     java -jar Battle2048.jar -h
 
+## 実行結果
+
+プログラムを実行すると次の様な結果が表示されます。
+```json
+{ "winner": 1, "reasonOfOpponentDefeat": "PRESENTATION_ERROR_AT_MAIN_OR_ATTACK" }
+```
+
+`winner` は勝利したプレイヤーの番号（一人目なら`0`、二人目なら`1`）、`reasonOfOpponentDefeat`は勝利した理由（相手が敗北した理由）です。
+
+|reasonOfOpponentDefeat|意味|
+|---|---|
+| PRESENTATION_ERROR_AT_INIT           | 「ゲーム開始前の出力」の出力フォーマットが正しくない |
+| INVALID_POSITION_AT_INIT             | 「ゲーム開始前の出力」でボードの外を指定した |
+| PRESENTATION_ERROR_AT_MAIN_OR_ATTACK | 「各ターンの出力」の出力フォーマットが正しくない |
+| CANNOT_MOVE_AT_MAIN                  | 「各ターンの出力」でスライドできない方向を指定した |
+| INVALID_M_AND_V_AT_ATTACK            | 「各ターンの出力」のマージされたマスの数と相手のボードに置く数が一致していない |
+| INVALID_NUMBER_OF_R_AND_C_AT_ATTACK  | 「各ターンの出力」のMと r<sub>i</sub>,c<sub>i</sub>の数が一致していない |
+| INVALID_POSITION_AT_ATTACK           | 「各ターンの出力」でボードの外を指定した |
+| ALREADY_OCCUPIED_AT_ATTACK           | 「各ターンの出力」ですでに数字があるマスを指定した |
+| LESS_SCORE_AT_END                    | ゲーム終了時、自分のスコアが相手のスコアを上回った |
+| FIRST_BUT_SAME_SCORE_AT_END          | ゲーム終了時、自分のスコアと相手のスコアと同じで、自分が後攻だった |
+
 ## サンプルプログラム
 
 SampleAI ディレクトリにサンプルプログラムが入っています。AI を作成する際の参考にしてください
