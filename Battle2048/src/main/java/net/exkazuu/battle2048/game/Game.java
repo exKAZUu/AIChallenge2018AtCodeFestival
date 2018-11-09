@@ -26,9 +26,6 @@ public class Game {
     if (!opponentBoard.withinBounds(p)) {
       return DefeatReason.INVALID_POSITION_AT_INIT;
     }
-    if (!opponentBoard.tileAvailable(p)) {
-      return DefeatReason.ALREADY_OCCUPIED_AT_INIT;
-    }
     opponentBoard.setExponent(1, p);
     return null;
   }
