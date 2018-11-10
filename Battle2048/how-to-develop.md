@@ -11,7 +11,7 @@ mvn compile
 mvn exec:java
 ```
 
-## How to Execute Test Cases
+## How to Execute Test Cases from Source Code
 
 ```
 cd Battle2048
