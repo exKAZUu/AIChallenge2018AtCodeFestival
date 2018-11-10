@@ -1,6 +1,7 @@
 # Battle2048
 
-AI CHALLENGE 2018 @ CODE FESTIVAL 用のゲームソフトウェアのソースコード一式です。
+本ドキュメントはAI CHALLENGE 2018 @ CODE FESTIVAL 用のゲームソフトウェアのソースコードのビルド方法について説明します。
+ビルド済みのバイナリファイルは[Releases](https://github.com/exKAZUu/AIChallenge2018AtCodeFestival/releases)からダウンロードしていただけます。
 
 ## How to Execute Game Software from Source Code
 
