@@ -8,6 +8,7 @@ module.exports = {
       { text: 'ゲームルール', link: '/rules/' },
       { text: 'ダウンロード', link: '/downloads/' },
       { text: 'オンライン対戦システム', link: 'https://aichallenge.exkazuu.net/' },
+      { text: 'FAQ', link: '/faq/' },
       { text: 'お問い合わせ', link: '/contact/' },
     ],
     search: false,
