@@ -1,6 +1,7 @@
 # Battle2048
 
-本ドキュメントは、AI CHALLENGE 2018 @ CODE FESTIVAL 用のゲームソフトウェア `Battle2048` の実行方法について説明しております。
+本ドキュメントは、[Releases](https://github.com/exKAZUu/AIChallenge2018AtCodeFestival/releases)で公開中の zip ファイルに同梱することを前提に、
+AI Challenge 2018 @ CODE FESTIVAL 用のゲームソフトウェア `Battle2048` の実行方法を説明します。
 
 ## 実行方法
 
