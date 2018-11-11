@@ -117,11 +117,11 @@ public class Game {
     int score1 = getMyBoard(0).getScore();
     int score2 = getMyBoard(1).getScore();
     if (score1 > score2) {
-      _result = new GameResult(getOpponentIndex(0), DefeatReason.LESS_SCORE_AT_END);
+      _result = new GameResult(0, DefeatReason.LESS_SCORE_AT_END);
     } else if (score1 < score2) {
-      _result = new GameResult(getOpponentIndex(1), DefeatReason.LESS_SCORE_AT_END);
+      _result = new GameResult(1, DefeatReason.LESS_SCORE_AT_END);
     } else {
-      _result = new GameResult(getOpponentIndex(1), DefeatReason.FIRST_BUT_SAME_SCORE_AT_END);
+      _result = new GameResult(1, DefeatReason.FIRST_BUT_SAME_SCORE_AT_END);
     }
 
     return _result;
