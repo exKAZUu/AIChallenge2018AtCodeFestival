@@ -43,7 +43,11 @@ public class GameManager {
       if (controller.timeExceeded()) {
         return killController(DefeatReason.TIME_LIMIT_EXCEEDED_AT_INIT, playerIndex);
       }
-      this.recorder.add(new TurnRecord(playerIndex).setAIOutput(result));
+      this.recorder.add(new TurnRecord(playerIndex)
+        .setAIInput(Integer.toString(playerIndex))
+        .setAIOutput(result)
+        .setRuntime(controller.getLastConsumedMillisecond())
+      );
 
       if (result.length != 2) {
         return killController(DefeatReason.PRESENTATION_ERROR_AT_INIT, playerIndex);
@@ -81,7 +85,11 @@ public class GameManager {
           return killController(DefeatReason.TIME_LIMIT_EXCEEDED_AT_MAIN_OR_ATTACK, playerIndex);
         }
 
-        this.recorder.add(new TurnRecord(playerIndex).setAIInput(_game, playerIndex).setAIOutput(result));
+        this.recorder.add(new TurnRecord(playerIndex)
+          .setAIInput(_game, playerIndex)
+          .setAIOutput(result)
+          .setRuntime(limitingTimeController.getLastConsumedMillisecond())
+        );
 
         if (result.length < 5) {
           return killController(DefeatReason.PRESENTATION_ERROR_AT_MAIN_OR_ATTACK, playerIndex);
