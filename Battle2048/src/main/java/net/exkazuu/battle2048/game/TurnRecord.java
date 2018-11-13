@@ -10,6 +10,11 @@ public class TurnRecord {
     this.playerIndex = playerIndex;
   }
 
+  public TurnRecord setAIInput(final String input) {
+    this.AIInput = input;
+    return this;
+  }
+
   public TurnRecord setAIInput(final Game game, final int playerIndex) {
     this.AIInput = game.generateMainInput(playerIndex);
     return this;
