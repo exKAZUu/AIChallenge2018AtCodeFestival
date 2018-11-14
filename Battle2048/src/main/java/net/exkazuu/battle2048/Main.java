@@ -118,19 +118,23 @@ public class Main {
     GameResult result = gameManager.start();
 
     if (cl.hasOption(ONLINE_SYSTEM)) {
-      final JudgeOutput judgeOutput = new JudgeOutput()
-        .setWinner(result.winner)
-        .setReplay(gameManager.recorder.getReplayList());
+      final JudgeOutput judgeOutput = new JudgeOutput(result.winner, gameManager.recorder.getReplayList(), result);
+      for (int player = 0; player < 2; player++) {
+        final ExternalComputerPlayer computerPlayer = mainCtrls.get(player).getExternalComputerPlayer();
+        if (computerPlayer != null) {
+          judgeOutput.addLog(player, "STDERR>>\n" + computerPlayer.getErrorLog());
+        }
+      }
 
       System.out.println(new ObjectMapper().writeValueAsString(judgeOutput));
 
     } else {
       System.out.println(new ObjectMapper().writeValueAsString(result));
+
+      gameManager.recorder.writeReplayLog(cl.getOptionValue("o", DEFAULT_RECORD_FILENAME), result);
     }
 
     Logger.getInstance().finalize();
-
-    gameManager.recorder.writeReplayLog(cl.getOptionValue("o", DEFAULT_RECORD_FILENAME));
 
     for (int i = 0; i < 2; i++) {
       initCtrls.get(i).release();

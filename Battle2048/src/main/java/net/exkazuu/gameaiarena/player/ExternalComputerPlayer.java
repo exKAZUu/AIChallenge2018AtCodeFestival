@@ -135,6 +135,7 @@ public class ExternalComputerPlayer {
           stream.flush();
         }
         _errorLog.append(line);
+        _errorLog.append('\n');
       }
     } catch (IOException e) {
       System.err.println("Fail to read the error stream.");
