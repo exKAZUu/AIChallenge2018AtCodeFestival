@@ -11,7 +11,7 @@ public class Game {
   private static final int MAX_TURNS = 1000 * 2;
 
   private final Board[] _boards;
-  private int _turn;
+  private int _turn = 0;
   private int[] _timeLeft;
   private GameResult _result;
 
@@ -109,7 +109,7 @@ public class Game {
   }
 
   public GameResult lose(int playerIndex, DefeatReason reason) {
-    _result = new GameResult(getOpponentIndex(playerIndex), reason);
+    _result = new GameResult(getOpponentIndex(playerIndex), _turn / 2 + 1, reason);
     return _result;
   }
 
@@ -117,11 +117,11 @@ public class Game {
     int score1 = getMyBoard(0).getScore();
     int score2 = getMyBoard(1).getScore();
     if (score1 > score2) {
-      _result = new GameResult(0, DefeatReason.LESS_SCORE_AT_END);
+      _result = new GameResult(0, _turn / 2 + 1, DefeatReason.LESS_SCORE_AT_END);
     } else if (score1 < score2) {
-      _result = new GameResult(1, DefeatReason.LESS_SCORE_AT_END);
+      _result = new GameResult(1, _turn / 2 + 1, DefeatReason.LESS_SCORE_AT_END);
     } else {
-      _result = new GameResult(1, DefeatReason.FIRST_BUT_SAME_SCORE_AT_END);
+      _result = new GameResult(1, _turn / 2 + 1, DefeatReason.FIRST_BUT_SAME_SCORE_AT_END);
     }
 
     return _result;
