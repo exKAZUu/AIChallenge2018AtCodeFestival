@@ -42,6 +42,10 @@ public abstract class Controller<Arg, Result extends Serializable> {
     return new LimitingTimeController<>(this, maxMillisecond);
   }
 
+  public LimitingTimeController<Arg, Result> limitingTime(int maxMillisecond, int maxTotalMillisecond) {
+    return new LimitingTimeController<>(this, maxMillisecond, maxTotalMillisecond);
+  }
+
   public LimitingSumTimeController<Arg, Result> limitingSumTime(int availableMillisecond,
                                                                 int maxSumExeededMillisecond) {
     return new LimitingSumTimeController<>(this, maxSumExeededMillisecond,
