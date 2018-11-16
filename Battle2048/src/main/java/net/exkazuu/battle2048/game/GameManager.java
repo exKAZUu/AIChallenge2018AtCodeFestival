@@ -3,13 +3,13 @@ package net.exkazuu.battle2048.game;
 import com.google.common.collect.ImmutableMap;
 import net.exkazuu.gameaiarena.api.Direction4;
 import net.exkazuu.gameaiarena.api.Point2;
-import net.exkazuu.gameaiarena.controller.LimitingSumTimeController;
 import net.exkazuu.gameaiarena.controller.LimitingTimeController;
 import net.exkazuu.gameaiarena.controller.Controller;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class GameManager {
   private static final Map<Character, Direction4> charToDirection = ImmutableMap.of(
@@ -17,27 +17,21 @@ public class GameManager {
   );
 
   private final Game _game;
-  private final List<Controller<Game, String[]>> _initCtrls;
-  private final List<Controller<Game, String[]>> _mainCtrls;
-  private final int _initTimeLimit;
-  private final int _mainTurnTimeLimit;
-  private final int _mainSumTimeLimit;
+  private final List<LimitingTimeController<Game, String[]>> _initCtrls;
+  private final List<LimitingTimeController<Game, String[]>> _mainCtrls;
 
   public final GameRecorder recorder;
 
-  public GameManager(List<Controller<Game, String[]>> initCtrls, List<Controller<Game, String[]>> mainCtrls, int initTimeLimit, int mainTurnTimeLimit, int mainSumTimeLimit) {
+  public GameManager(List<Controller<Game, String[]>> initCtrls, List<Controller<Game, String[]>> mainCtrls, int initTimeLimit, int mainTurnTimeLimit, int mainTotalTimeLimit) {
     _game = new Game();
-    _initCtrls = initCtrls;
-    _mainCtrls = mainCtrls;
-    _initTimeLimit = initTimeLimit;
-    _mainTurnTimeLimit = mainTurnTimeLimit;
-    _mainSumTimeLimit = mainSumTimeLimit;
+    _initCtrls = initCtrls.stream().map(ctlr -> ctlr.limitingTime(initTimeLimit)).collect(Collectors.toList());
+    _mainCtrls = mainCtrls.stream().map(ctlr -> ctlr.limitingTime(mainTurnTimeLimit, mainTotalTimeLimit)).collect(Collectors.toList());
     recorder = new GameRecorder();
   }
 
   public GameResult start() {
     for (int playerIndex = 0; playerIndex < _initCtrls.size(); playerIndex++) {
-      LimitingTimeController<Game, String[]> controller = new LimitingTimeController<>(_initCtrls.get(playerIndex), _initTimeLimit);
+      LimitingTimeController<Game, String[]> controller = _initCtrls.get(playerIndex);
       String[] result = controller.run(_game);
 
       if (controller.timeExceeded()) {
@@ -65,30 +59,28 @@ public class GameManager {
       }
     }
 
-    List<LimitingSumTimeController<Game, String[]>> limitingSumTimeControllers = new ArrayList<>();
-    for (Controller<Game, String[]> controller : _mainCtrls) {
-      limitingSumTimeControllers.add(new LimitingSumTimeController<>(controller, 0, _mainSumTimeLimit));
-    }
     while (!_game.finished()) {
       for (int playerIndex = 0; playerIndex < _mainCtrls.size(); playerIndex++) {
         if (!_game.getMyBoard(playerIndex).canMove()) {
           return killController(DefeatReason.CANNOT_MOVE_AT_MAIN, playerIndex);
         }
 
-        LimitingSumTimeController<Game, String[]> limitingSumTimeController = limitingSumTimeControllers.get(playerIndex);
-        LimitingTimeController<Game, String[]> limitingTimeController = new LimitingTimeController<>(limitingSumTimeController, _mainTurnTimeLimit);
+        LimitingTimeController<Game, String[]> controller = _mainCtrls.get(playerIndex);
+        _game.setMyTimeLeft(playerIndex, controller.getRestTotalConsumedMillisecond());
+        String[] result = controller.run(_game);
 
-        _game.setMyTimeLeft(playerIndex, limitingSumTimeController.getRestExceededMillisecond());
-        String[] result = limitingTimeController.run(_game);
+        if (controller.turnTimeExceeded()) {
+          return killController(DefeatReason.TURN_TIME_LIMIT_EXCEEDED_AT_MAIN_OR_ATTACK, playerIndex);
+        }
 
-        if (limitingSumTimeController.timeExceeded() || limitingTimeController.timeExceeded()) {
-          return killController(DefeatReason.TIME_LIMIT_EXCEEDED_AT_MAIN_OR_ATTACK, playerIndex);
+        if (controller.totalTimeExceeded()) {
+          return killController(DefeatReason.TOTAL_TIME_LIMIT_EXCEEDED_AT_MAIN_OR_ATTACK, playerIndex);
         }
 
         this.recorder.add(new TurnRecord(playerIndex)
           .setAIInput(_game, playerIndex)
           .setAIOutput(result)
-          .setRuntime(limitingTimeController.getLastConsumedMillisecond())
+          .setRuntime(controller.getLastConsumedMillisecond())
         );
 
         if (result.length < 5) {
