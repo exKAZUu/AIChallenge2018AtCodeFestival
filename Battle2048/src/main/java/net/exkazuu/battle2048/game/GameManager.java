@@ -107,7 +107,7 @@ public class GameManager {
         } catch (Exception e) {
           return killController(DefeatReason.PRESENTATION_ERROR_AT_MAIN_OR_ATTACK, playerIndex);
         }
-        if (result.length != 3 + M * 2) {
+        if (result.length != 3 + M * 2 || V < 1) {
           return killController(DefeatReason.PRESENTATION_ERROR_AT_MAIN_OR_ATTACK, playerIndex);
         }
 
