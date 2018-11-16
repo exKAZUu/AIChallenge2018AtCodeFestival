@@ -9,7 +9,8 @@ public class LimitingTimeController<Arg, Result extends Serializable>
   private final int maxTotalMillisecond;
   private int lastConsumedMillisecond;
   private int totalConsumedMillisecond;
-  private boolean timeExceeded;
+  private boolean turnTimeExceeded;
+  private boolean totalTimeExceeded;
 
   public LimitingTimeController(Controller<Arg, Result> controller, int maxMillisecond) {
     this(controller, maxMillisecond, 0);
@@ -23,7 +24,7 @@ public class LimitingTimeController<Arg, Result extends Serializable>
 
   @Override
   protected void sendDataToAI(Arg input) {
-    if (timeExceeded) {
+    if (turnTimeExceeded || totalTimeExceeded) {
       return;
     }
     controller.sendDataToAI(input);
@@ -31,7 +32,7 @@ public class LimitingTimeController<Arg, Result extends Serializable>
 
   @Override
   protected void receiveDataFromAI(Arg input) {
-    if (timeExceeded) {
+    if (turnTimeExceeded || totalTimeExceeded) {
       return;
     }
     final Thread thread = new Thread(() -> controller.receiveDataFromAI(input));
@@ -45,10 +46,9 @@ public class LimitingTimeController<Arg, Result extends Serializable>
 
     lastConsumedMillisecond = (int) (System.currentTimeMillis() - currentTimeMillis);
     totalConsumedMillisecond += lastConsumedMillisecond;
-    timeExceeded = timeExceeded || (lastConsumedMillisecond > maxMillisecond);
-    timeExceeded = timeExceeded || (0 < maxTotalMillisecond && totalConsumedMillisecond > maxTotalMillisecond);
-    timeExceeded = timeExceeded || thread.isAlive();
-    if (timeExceeded) {
+    turnTimeExceeded = turnTimeExceeded || (lastConsumedMillisecond > maxMillisecond) || thread.isAlive();
+    totalTimeExceeded = totalTimeExceeded || (0 < maxTotalMillisecond && totalConsumedMillisecond > maxTotalMillisecond);
+    if (turnTimeExceeded || totalTimeExceeded) {
       // System.err.println("Terminated the thread because time was exceeded.");
       thread.stop();
       release();
@@ -56,7 +56,15 @@ public class LimitingTimeController<Arg, Result extends Serializable>
   }
 
   public boolean timeExceeded() {
-    return timeExceeded;
+    return turnTimeExceeded || totalTimeExceeded;
+  }
+
+  public boolean turnTimeExceeded() {
+    return turnTimeExceeded;
+  }
+
+  public boolean totalTimeExceeded() {
+    return totalTimeExceeded;
   }
 
   public int getLastConsumedMillisecond() {

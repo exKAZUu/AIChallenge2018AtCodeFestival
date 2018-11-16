@@ -44,18 +44,22 @@ AI プログラムおよびワーキングディレクトリはそれぞれ 2 �
 
 `winner` は勝利したプレイヤーの番号（一人目なら`0`、二人目なら`1`）、`reasonOfOpponentDefeat`は勝利した理由（相手が敗北した理由）です。
 
-| reasonOfOpponentDefeat               | 意味                                                                                                     |
-| ------------------------------------ | -------------------------------------------------------------------------------------------------------- |
-| PRESENTATION_ERROR_AT_INIT           | 「ゲーム開始前の出力」の出力フォーマットが正しくない                                                     |
-| INVALID_POSITION_AT_INIT             | 「ゲーム開始前の出力」でボードの外を指定した                                                             |
-| PRESENTATION_ERROR_AT_MAIN_OR_ATTACK | 「各ターンの出力」の出力フォーマットが正しくない                                                         |
-| CANNOT_MOVE_AT_MAIN                  | 「各ターンの出力」でスライドできない方向を指定した、もしくは、ターン開始時にスライドできる方向がなかった |
-| INVALID_M_AND_V_AT_ATTACK            | 「各ターンの出力」のマージされたマスの数と相手のボードに置く数が一致していない                           |
-| INVALID_NUMBER_OF_R_AND_C_AT_ATTACK  | 「各ターンの出力」の M と r<sub>i</sub>,c<sub>i</sub>の数が一致していない                                |
-| INVALID_POSITION_AT_ATTACK           | 「各ターンの出力」でボードの外を指定した                                                                 |
-| ALREADY_OCCUPIED_AT_ATTACK           | 「各ターンの出力」で既に数字があるマスを指定した                                                         |
-| LESS_SCORE_AT_END                    | ゲーム終了時、自分のスコアが相手のスコアを上回った                                                       |
-| FIRST_BUT_SAME_SCORE_AT_END          | ゲーム終了時、自分のスコアと相手のスコアと同じで、自分が後攻だった                                       |
+| reasonOfOpponentDefeat                      | 意味                                                                                                     |
+| ------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| PRESENTATION_ERROR_AT_INIT                  | 「ゲーム開始前の出力」の出力フォーマットが正しくない                                                     |
+| INVALID_POSITION_AT_INIT                    | 「ゲーム開始前の出力」でボードの外を指定した                                                             |
+| INVALID_POSITION_AT_INIT                    | 「ゲーム開始前の出力」でボードの外を指定した                                                             |
+| TIME_LIMIT_EXCEEDED_AT_INIT                 | 「ゲーム開始前の出力」で該当ターンの計算時間がで 1 秒を超えた                                            |
+| PRESENTATION_ERROR_AT_MAIN_OR_ATTACK        | 「各ターンの出力」の出力フォーマットが正しくない                                                         |
+| CANNOT_MOVE_AT_MAIN                         | 「各ターンの出力」でスライドできない方向を指定した、もしくは、ターン開始時にスライドできる方向がなかった |
+| INVALID_M_AND_V_AT_ATTACK                   | 「各ターンの出力」のマージされたマスの数と相手のボードに置く数が一致していない                           |
+| INVALID_NUMBER_OF_R_AND_C_AT_ATTACK         | 「各ターンの出力」の M と r<sub>i</sub>,c<sub>i</sub>の数が一致していない                                |
+| INVALID_POSITION_AT_ATTACK                  | 「各ターンの出力」でボードの外を指定した                                                                 |
+| ALREADY_OCCUPIED_AT_ATTACK                  | 「各ターンの出力」で既に数字があるマスを指定した                                                         |
+| TURN_TIME_LIMIT_EXCEEDED_AT_MAIN_OR_ATTACK  | 「各ターンの出力」で該当ターンの計算時間がで 1 秒を超えた                                                |
+| TOTAL_TIME_LIMIT_EXCEEDED_AT_MAIN_OR_ATTACK | 「各ターンの出力」で総ターンの計算時間がで 100 秒を超えた                                                |
+| LESS_SCORE_AT_END                           | ゲーム終了時、自分のスコアが相手のスコアを上回った                                                       |
+| FIRST_BUT_SAME_SCORE_AT_END                 | ゲーム終了時、自分のスコアと相手のスコアと同じで、自分が後攻だった                                       |
 
 ## サンプルプログラム
 

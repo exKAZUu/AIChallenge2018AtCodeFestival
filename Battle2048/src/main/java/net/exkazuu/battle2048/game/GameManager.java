@@ -69,8 +69,12 @@ public class GameManager {
         _game.setMyTimeLeft(playerIndex, controller.getRestTotalConsumedMillisecond());
         String[] result = controller.run(_game);
 
-        if (controller.timeExceeded() || controller.timeExceeded()) {
-          return killController(DefeatReason.TIME_LIMIT_EXCEEDED_AT_MAIN_OR_ATTACK, playerIndex);
+        if (controller.turnTimeExceeded()) {
+          return killController(DefeatReason.TURN_TIME_LIMIT_EXCEEDED_AT_MAIN_OR_ATTACK, playerIndex);
+        }
+
+        if (controller.totalTimeExceeded()) {
+          return killController(DefeatReason.TOTAL_TIME_LIMIT_EXCEEDED_AT_MAIN_OR_ATTACK, playerIndex);
         }
 
         this.recorder.add(new TurnRecord(playerIndex)
