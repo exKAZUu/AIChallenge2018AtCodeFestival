@@ -2,9 +2,6 @@ box: node
 build:
   steps:
     - add-ssh-key:
-        keyname: GITHUB
-        host: github.com
-    - add-ssh-key:
         keyname: GITHUB_KEY
         host: github.com
     - add-to-known_hosts:
