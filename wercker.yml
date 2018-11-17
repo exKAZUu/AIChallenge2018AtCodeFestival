@@ -11,6 +11,10 @@ build:
         code: |
           yarn config set cache-folder "$WERCKER_CACHE_DIR/yarn"
           yarn install
+    - script:
+        name: test
+        code: |
+          yarn test
 deploy:
   steps:
     - script:

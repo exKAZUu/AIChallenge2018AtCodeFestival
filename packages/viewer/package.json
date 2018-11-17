@@ -1,0 +1,22 @@
+{
+  "name": "viewer-for-ai-challenge-2018-at-code-festival",
+  "version": "1.0.0",
+  "description": "Game Viewer for AI Challenge at CodeFestival 2018",
+  "main": "src/index.js",
+  "repository": "https://github.com/exKAZUu/CodeFestival2018.git",
+  "author": "exkazuu, tossy310, rdrgn",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "cross-env RUNTIME=web webpack-dev-server --mode development --open",
+    "build": "rm -rf dist && cross-env RUNTIME=web webpack",
+    "prettier": "prettier --write **/*.{md,ts} *",
+    "tslint": "tslint -p . -t verbose",
+    "tslint-fix": "yarn tslint --fix"
+  },
+  "dependencies": {
+    "seedrandom": "^2.4.4",
+    "tslib": "^1.9.3",
+    "yargs": "^12.0.2"
+  }
+}
