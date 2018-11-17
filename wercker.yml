@@ -1,6 +1,8 @@
 box: node
 build:
   steps:
+    - add-ssh-key:
+        keyname: GITHUB
     - script:
         name: temp
         code: |
