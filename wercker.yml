@@ -2,6 +2,10 @@ box: node
 build:
   steps:
     - script:
+        name: temp
+        code: |
+          git clone git@github.com:exKAZUu/AIChallenge2018AtCodeFestival.git
+    - script:
         name: show environment information
         code: |
           echo "node: $(node -v)"
