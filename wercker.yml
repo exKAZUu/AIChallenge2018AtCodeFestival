@@ -13,8 +13,14 @@ build:
           yarn install
 deploy:
   steps:
+    - add-ssh-key:
+        keyname: GITHUB_KEY
+        host: github.com
+    - add-to-known_hosts:
+        hostname: github.com
+        fingerprint: SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8
     - script:
         name: deploy docs
         code: |
           cd packages/docs
-          # yarn gh-pages
+          yarn gh-pages
