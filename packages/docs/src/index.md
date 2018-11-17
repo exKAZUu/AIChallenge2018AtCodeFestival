@@ -17,6 +17,7 @@ AI Challenge 2018 は [CODE FESTIVAL](https://www.recruit-jinji.jp/recruitment/c
 
 ## お知らせ
 
+- **2018/11/17 (土) 10:00** [予選結果](https://aichallenge.exkazuu.net/contests/7) を公開いたしました！決勝参加者は、「さはら」「kurenai3110」「risujiroh」「packer_jp」「nagiss」「yosss」「Aquarius」「primenumber」です！会場でお会いしましょう！
 - **2018/11/16 (金) 14:00** [ゲームソフトウェア（正式版）](https://github.com/exKAZUu/AIChallenge2018AtCodeFestival/releases) v1.0.3 を公開いたしました。お手数をおかけしますが、決勝参加者を決定するために、CODE FESTIVAL 2018 本戦参加者の方は、11/17 (土) 午前 9 時までに[Google Form](https://docs.google.com/forms/d/e/1FAIpQLSemWIDk-cKEk8iLj9KJ5525yQiZL4Isq8ucKxg-X5WB3H9Osg/viewform?usp=sf_link)で ID 情報をご入力ください。
 - **2018/11/13 (火) 15:00** [ゲームビューア（正式版）](https://www.exkazuu.net/GameViewerForAIChallenge2018AtCodeFestival/)の更新に伴い、[ゲームソフトウェア v1.0.2](https://github.com/exKAZUu/AIChallenge2018AtCodeFestival/releases)を公開いたしました。
 - **2018/11/10 (土) 8:45** [ゲームソフトウェア（正式版）](https://github.com/exKAZUu/AIChallenge2018AtCodeFestival/releases)、[ゲームビューア（正式版）](https://www.exkazuu.net/GameViewerForAIChallenge2018AtCodeFestival/)、[オンライン対戦システム](https://aichallenge.exkazuu.net/)を公開いたしました。ゲームビューアは引き続き改良を続ける予定です。
