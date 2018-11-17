@@ -20,6 +20,11 @@ deploy:
         hostname: github.com
         fingerprint: SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8
     - script:
+        name: configure git
+        code: |
+          git config --global user.email "exkazuu@gmail.com"
+          git config --global user.name "Sakamoto, Kazunori"
+    - script:
         name: deploy docs
         code: |
           cd packages/docs
