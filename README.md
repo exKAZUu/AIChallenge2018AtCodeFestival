@@ -1,18 +1,12 @@
-# AIChallenge2018 at CodeFestival
+# Software and Documents for AI Challenge @ CODE FESTIVAL 2018
 
 [![wercker status](https://app.wercker.com/status/7dd58112b3c4214e3e500d1f1ae12848/m/master 'wercker status')](https://app.wercker.com/project/byKey/7dd58112b3c4214e3e500d1f1ae12848)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Game Software
 
 Please see [Battle2048](./Battle2048).
 
-## License
+## Contest and Game Rules
 
-This work is applied the Apache License Version 2.0.
-
-```
-Copyright 2018 Kazunori Sakamoto
-Copyright 2018 Hiroki Sato
-Copyright 2018 Remin Kasahara
-Copyright 2018 Pedro Caldeira
-```
+Please see [official site](https://www.exkazuu.net/AIChallenge2018AtCodeFestival/).

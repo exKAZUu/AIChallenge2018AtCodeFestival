@@ -1,0 +1,30 @@
+{
+  "name": "game-for-ai-challenge-2018-at-code-festival",
+  "version": "1.0.0",
+  "description": "Game Software for AI Challenge at CodeFestival 2018",
+  "main": "src/index.js",
+  "repository": "https://github.com/exKAZUu/CodeFestival2018.git",
+  "author": "exkazuu, tossy310, rdrgn",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "yarn start:dev",
+    "start:dev": "cross-env RUNTIME=node ts-node src/main.ts",
+    "start:prod": "yarn build:prod && node dist/main.js",
+    "build:prod": "cross-env RUNTIME=node webpack --config webpack.config --mode production",
+    "build:echo": "../../script/build.sh ../../examples/echo",
+    "build:rand": "../../script/build.sh ../../examples/random",
+    "package": "yarn build:prod && nexe dist/main.js",
+    "test": "jest",
+    "prettier": "prettier --write **/*.{md,ts} *",
+    "tslint": "tslint -p . -t verbose",
+    "tslint-fix": "yarn tslint --fix"
+  },
+  "dependencies": {
+    "@types/js-combinatorics": "0.5.29",
+    "js-combinatorics": "0.5.3",
+    "seedrandom": "^2.4.4",
+    "tslib": "^1.9.3",
+    "yargs": "^12.0.2"
+  }
+}

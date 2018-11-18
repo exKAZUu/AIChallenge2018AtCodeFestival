@@ -1,0 +1,37 @@
+{
+  "extends": ["tslint-microsoft-contrib", "tslint-config-prettier"],
+  "ignoreDefinitionFiles": false,
+  "linterOptions": {
+    "exclude": ["**/*.json", "**/node_modules/**"]
+  },
+  "rules": {
+    // default rules
+    "no-console": false,
+    "no-namespace": true, // Use const object instead of 'module' and 'namespace'
+    "typedef": false, // because we want to avoid writing types at too many places
+    "no-increment-decrement": false,
+    "strict-boolean-expressions": false,
+    "insecure-random": false,
+    "newline-before-return": false,
+    "no-suspicious-comment": false,
+    "completed-docs": false,
+
+    // tslint-microsoft-contrib
+    "import-name": false,
+    "interface-name": false, // c.f. https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines#names
+    "missing-jsdoc": false,
+    "no-any": false,
+    "no-relative-imports": false,
+    "no-unsafe-any": false,
+    // tslint-plugin-prettier
+    "prettier": [
+      true,
+      {
+        "printWidth": 120,
+        "singleQuote": true,
+        "trailingComma": "es5"
+      }
+    ]
+  },
+  "rulesDirectory": ["tslint-plugin-prettier", "node_modules/tslint-microsoft-contrib"]
+}
