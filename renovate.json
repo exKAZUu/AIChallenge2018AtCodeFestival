@@ -1,15 +1,3 @@
 {
-  "extends": ["config:base"],
-  "rebaseStalePrs": true,
-  "prCreation": "not-pending",
-  "dependencies": {
-    "automerge": false
-  },
-  "devDependencies": {
-    "automerge": true,
-    "major": {
-      "automerge": false
-    }
-  },
-  "automergeType": "branch-push"
+  "extends": ["exkazuu-renovate-config"]
 }

@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "bootstrap": "yarn lerna bootstrap --use-workspaces",
-    "smart-upgrade": "yarn upgrade && yarn yarn-deduplicate package.json",
+    "smart-upgrade": "yarn upgrade && yarn yarn-deduplicate yarn.lock && yarn",
     "test": "yarn lerna run --stream test",
     "prettier": "prettier --write * **/*.{css,html,js,json,md,scss,yml}",
     "tslint": "tslint -p . -t verbose",
@@ -23,6 +23,7 @@
     "eslint": "5.9.0",
     "eslint-config-prettier": "3.3.0",
     "eslint-plugin-prettier": "3.0.0",
+    "exkazuu-renovate-config": "1.0.0",
     "html-webpack-plugin": "3.2.0",
     "husky": "1.1.4",
     "jest": "23.6.0",
