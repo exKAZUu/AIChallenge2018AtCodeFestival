@@ -4685,11 +4685,6 @@ exit@^0.1.2:
   resolved "https://registry.yarnpkg.com/exit/-/exit-0.1.2.tgz#0632638f8d877cc82107d30a0fff1a17cba1cd0c"
   integrity sha1-BjJjj42HfMghB9MKD/8aF8uhzQw=
 
-exkazuu-renovate-config@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/exkazuu-renovate-config/-/exkazuu-renovate-config-1.0.0.tgz#05c49008584705f7b663ce440e642b08e953ffd6"
-  integrity sha512-vllEA2vr+eWUKwRFpRB475oeWdqfAuvQ5P+uHWrMSWwSBVvsoWuX4P8r18wBFqpVWytAGpO0F+r67EmAK4cSNg==
-
 expand-brackets@^0.1.4:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/expand-brackets/-/expand-brackets-0.1.5.tgz#df07284e342a807cd733ac5af72411e581d1177b"
@@ -10326,6 +10321,11 @@ renderkid@^2.0.1:
     htmlparser2 "~3.3.0"
     strip-ansi "^3.0.0"
     utila "^0.4.0"
+
+renovate-config-exkazuu@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/renovate-config-exkazuu/-/renovate-config-exkazuu-1.0.0.tgz#8a199f41825db581b1b49d6258b7a890dd7764da"
+  integrity sha512-YgjAuria+jG4yTmzIlEGGBKMf8jpiDu7KfLk6maaMptM4bIhPoXwweq4UvoZpjOpR01VMxit5eYv0nlxrGHFdA==
 
 repeat-element@^1.1.2:
   version "1.1.3"
