@@ -14,7 +14,7 @@
   ],
   "devDependencies": {
     "@types/jest": "23.3.12",
-    "@types/node": "10.12.9",
+    "@types/node": "10.12.18",
     "@types/seedrandom": "2.4.27",
     "@types/yargs": "12.0.1",
     "copy-webpack-plugin": "4.6.0",
