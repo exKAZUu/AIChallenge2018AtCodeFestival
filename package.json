@@ -34,7 +34,7 @@
     "renovate-config-exkazuu": "1.0.0",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1",
-    "ts-jest": "23.10.4",
+    "ts-jest": "23.10.5",
     "ts-loader": "5.3.0",
     "ts-node": "7.0.1",
     "tslint": "5.12.1",
