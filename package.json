@@ -30,7 +30,7 @@
     "lint-staged": "8.1.0",
     "nexe": "2.0.0-rc.34",
     "node-sass": "4.9.4",
-    "prettier": "1.15.2",
+    "prettier": "1.15.3",
     "renovate-config-exkazuu": "1.0.0",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1",
