@@ -1304,10 +1304,10 @@
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.12.tgz#7e0ced251fa94c3bc2d1023d4b84b2992fa06376"
   integrity sha512-/kQvbVzdEpOq4tEWT79yAHSM4nH4xMlhJv2GrLVQt4Qmo8yYsPdioBM1QpN/2GX1wkfMnyXvdoftvLUr0LBj7Q==
 
-"@types/js-combinatorics@0.5.30":
-  version "0.5.30"
-  resolved "https://registry.yarnpkg.com/@types/js-combinatorics/-/js-combinatorics-0.5.30.tgz#e3ff0cf565ddbfe28147aea521661e63cfbc197d"
-  integrity sha512-gK9J+NRcz3uGJBuqhHIU6yEROxVXBaNyC8LpnNwiDgrwekoksb0cjKH574Z6VsoBiszK3C0+Oet+ljIab0knYQ==
+"@types/js-combinatorics@0.5.31":
+  version "0.5.31"
+  resolved "https://registry.yarnpkg.com/@types/js-combinatorics/-/js-combinatorics-0.5.31.tgz#a61a3f625009e2e693492c158ac8afb243efecad"
+  integrity sha512-0JGeWYJdHIpX2gttyxqnzpKwK3KmyFZysWI8+fnXdiOo/kEFxDMdo/pwhrtBrHvYgRAsDNJCSQzgA+m8vbHvFw==
 
 "@types/node@10.12.18":
   version "10.12.18"
