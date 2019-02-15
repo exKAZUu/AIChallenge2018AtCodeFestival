@@ -21,7 +21,7 @@
     "tslint-fix": "yarn tslint --fix"
   },
   "dependencies": {
-    "@types/js-combinatorics": "0.5.30",
+    "@types/js-combinatorics": "0.5.31",
     "js-combinatorics": "0.5.4",
     "seedrandom": "2.4.4",
     "tslib": "1.9.3",

@@ -1311,10 +1311,10 @@
   dependencies:
     "@types/jest-diff" "*"
 
-"@types/js-combinatorics@0.5.30":
-  version "0.5.30"
-  resolved "https://registry.yarnpkg.com/@types/js-combinatorics/-/js-combinatorics-0.5.30.tgz#e3ff0cf565ddbfe28147aea521661e63cfbc197d"
-  integrity sha512-gK9J+NRcz3uGJBuqhHIU6yEROxVXBaNyC8LpnNwiDgrwekoksb0cjKH574Z6VsoBiszK3C0+Oet+ljIab0knYQ==
+"@types/js-combinatorics@0.5.31":
+  version "0.5.31"
+  resolved "https://registry.yarnpkg.com/@types/js-combinatorics/-/js-combinatorics-0.5.31.tgz#a61a3f625009e2e693492c158ac8afb243efecad"
+  integrity sha512-0JGeWYJdHIpX2gttyxqnzpKwK3KmyFZysWI8+fnXdiOo/kEFxDMdo/pwhrtBrHvYgRAsDNJCSQzgA+m8vbHvFw==
 
 "@types/node@10.12.18":
   version "10.12.18"
