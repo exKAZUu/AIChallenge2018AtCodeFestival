@@ -1381,10 +1381,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.18.tgz#1d3ca764718915584fcd9f6344621b7672665c67"
   integrity sha512-fh+pAqt4xRzPfqA6eh3Z2y6fyZavRIumvjhaCL753+TVkGKGhpPeyrJG2JftD0T9q4GF00KjefsQ+PQNDdWQaQ==
 
-"@types/seedrandom@2.4.27":
-  version "2.4.27"
-  resolved "https://registry.yarnpkg.com/@types/seedrandom/-/seedrandom-2.4.27.tgz#9db563937dd86915f69092bc43259d2f48578e41"
-  integrity sha1-nbVjk33YaRX2kJK8QyWdL0hXjkE=
+"@types/seedrandom@2.4.28":
+  version "2.4.28"
+  resolved "https://registry.yarnpkg.com/@types/seedrandom/-/seedrandom-2.4.28.tgz#9ce8fa048c1e8c85cb71d7fe4d704e000226036f"
+  integrity sha512-SMA+fUwULwK7sd/ZJicUztiPs8F1yCPwF3O23Z9uQ32ME5Ha0NmDK9+QTsYE4O2tHXChzXomSWWeIhCnoN1LqA==
 
 "@types/yargs-parser@*":
   version "13.0.0"
