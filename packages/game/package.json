@@ -25,6 +25,6 @@
     "js-combinatorics": "0.5.4",
     "seedrandom": "3.0.1",
     "tslib": "1.9.3",
-    "yargs": "13.2.0"
+    "yargs": "13.2.2"
   }
 }

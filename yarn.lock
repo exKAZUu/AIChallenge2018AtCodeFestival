@@ -1386,10 +1386,17 @@
   resolved "https://registry.yarnpkg.com/@types/seedrandom/-/seedrandom-2.4.27.tgz#9db563937dd86915f69092bc43259d2f48578e41"
   integrity sha1-nbVjk33YaRX2kJK8QyWdL0hXjkE=
 
-"@types/yargs@12.0.10":
-  version "12.0.10"
-  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-12.0.10.tgz#17a8ec65cd8e88f51b418ceb271af18d3137df67"
-  integrity sha512-WsVzTPshvCSbHThUduGGxbmnwcpkgSctHGHTqzWyFg4lYAuV5qXlyFPOsP3OWqCINfmg/8VXP+zJaa4OxEsBQQ==
+"@types/yargs-parser@*":
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/@types/yargs-parser/-/yargs-parser-13.0.0.tgz#453743c5bbf9f1bed61d959baab5b06be029b2d0"
+  integrity sha512-wBlsw+8n21e6eTd4yVv8YD/E3xq0O6nNnJIquutAsFGE7EyMKz7W6RNT6BRu1SmdgmlCZ9tb0X+j+D6HGr8pZw==
+
+"@types/yargs@13.0.0":
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-13.0.0.tgz#d2acb3bec0047d8f648ebacdab6b928a900c42c4"
+  integrity sha512-hY0o+kcz9M6kH32NUeb6VURghqMuCVkiUx+8Btsqhj4Hhov/hVGUx9DmBJeIkzlp1uAQK4wngQBCjqWdUUkFyA==
+  dependencies:
+    "@types/yargs-parser" "*"
 
 "@vue/babel-preset-app@^3.1.1":
   version "3.2.0"
@@ -12818,10 +12825,10 @@ yargs@12.0.2:
     y18n "^3.2.1 || ^4.0.0"
     yargs-parser "^10.1.0"
 
-yargs@13.2.0:
-  version "13.2.0"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-13.2.0.tgz#8b749168defffe473ec1e7980634aa360518d7e7"
-  integrity sha512-C+2y+DJwm9JIyZqeZtBnXQWAwltzeaWWtWmLdC7mBvs46PZu8a3WOyiKfJX+pEqOfzwH7OljABNwU2XJqftk6g==
+yargs@13.2.2:
+  version "13.2.2"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-13.2.2.tgz#0c101f580ae95cea7f39d927e7770e3fdc97f993"
+  integrity sha512-WyEoxgyTD3w5XRpAQNYUB9ycVH/PQrToaTXdYXRdOXvEy1l19br+VJsc0vcO8PTGg5ro/l/GY7F/JMEBmI0BxA==
   dependencies:
     cliui "^4.0.0"
     find-up "^3.0.0"
