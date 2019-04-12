@@ -28,7 +28,7 @@
     "jest": "24.7.1",
     "lerna": "3.13.2",
     "lint-staged": "8.1.0",
-    "nexe": "2.0.0-rc.34",
+    "nexe": "3.1.0",
     "node-sass": "4.11.0",
     "prettier": "1.17.0",
     "renovate-config-exkazuu": "1.0.0",
