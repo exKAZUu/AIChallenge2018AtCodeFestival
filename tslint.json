@@ -7,8 +7,8 @@
   "rules": {
     // default rules
     "no-console": false,
-    "no-namespace": true, // Use const object instead of 'module' and 'namespace'
-    "typedef": false, // because we want to avoid writing types at too many places
+    "no-namespace": true, // Use const object instead of `module` and `namespace`
+    "typedef": false, // Avoid writing types at too many places
     "no-increment-decrement": false,
     "strict-boolean-expressions": false,
     "insecure-random": false,
