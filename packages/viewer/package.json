@@ -15,8 +15,8 @@
     "tslint-fix": "yarn tslint --fix"
   },
   "dependencies": {
-    "seedrandom": "2.4.4",
+    "seedrandom": "3.0.1",
     "tslib": "1.9.3",
-    "yargs": "12.0.5"
+    "yargs": "13.2.2"
   }
 }
