@@ -8889,10 +8889,10 @@ neo-async@^2.5.0:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
   integrity sha512-MFh0d/Wa7vkKO3Y3LlacqAEeHK0mckVqzDieUKTT+KGxi+zIpeVsFxymkIiRpbpDziHc290Xr9A1O4Om7otoRA==
 
-nexe@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/nexe/-/nexe-3.1.0.tgz#e8fad6ccf3f802b1737a180ab360fc21b0971cae"
-  integrity sha512-pMbGqQXnwBA3X3oozxV6yacFTC4hFYlH3C1pSSrr1eI+ls9gbfL0ZPaoAMktey7rl/cRQaRTgVwHXlOKCxVVlw==
+nexe@3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/nexe/-/nexe-3.2.0.tgz#8af8b26b2f860c4b60023d96769cb4a09234e74e"
+  integrity sha512-6Y5k9x3IirHF/D8I5QFejtMaalKMvMsmpYOyFgFaD6rG1oc012uWcWaxDjs6Nl+TUOKC6h2NQW3Y5Je1Y18j3g==
   dependencies:
     "@calebboyd/semaphore" "^1.3.1"
     app-builder "^5.2.0"
