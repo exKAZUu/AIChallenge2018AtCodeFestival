@@ -2,10 +2,10 @@
   "name": "ai-challenge-2018-at-code-festival",
   "private": true,
   "scripts": {
-    "bootstrap": "yarn lerna bootstrap --use-workspaces",
+    "bootstrap": "yarn && yarn lerna bootstrap --use-workspaces",
     "smart-upgrade": "yarn upgrade && yarn yarn-deduplicate yarn.lock && yarn",
     "test": "yarn lerna run --stream test",
-    "prettier": "prettier --write * **/*.{css,html,js,json,md,scss,yml}",
+    "prettier": "prettier --write * **/*.{css,htm,html,js,jsx,json,md,scss,yml}",
     "tslint": "tslint -p . -t verbose",
     "tslint-fix": "yarn tslint --fix"
   },

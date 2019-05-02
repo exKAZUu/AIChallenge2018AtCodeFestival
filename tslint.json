@@ -1,5 +1,5 @@
 {
-  "extends": ["tslint-microsoft-contrib", "tslint-config-prettier"],
+  "extends": ["tslint-microsoft-contrib/recommended", "tslint-config-prettier"],
   "ignoreDefinitionFiles": false,
   "linterOptions": {
     "exclude": ["**/*.json", "**/node_modules/**"]
