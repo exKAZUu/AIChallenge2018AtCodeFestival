@@ -17,6 +17,6 @@
   "dependencies": {
     "seedrandom": "3.0.1",
     "tslib": "1.9.3",
-    "yargs": "13.2.2"
+    "yargs": "13.2.4"
   }
 }
