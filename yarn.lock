@@ -8828,10 +8828,10 @@ neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
-nexe@3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/nexe/-/nexe-3.2.0.tgz#8af8b26b2f860c4b60023d96769cb4a09234e74e"
-  integrity sha512-6Y5k9x3IirHF/D8I5QFejtMaalKMvMsmpYOyFgFaD6rG1oc012uWcWaxDjs6Nl+TUOKC6h2NQW3Y5Je1Y18j3g==
+nexe@3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/nexe/-/nexe-3.2.1.tgz#93d343e804b3c83493f6d8d4e1dee79577042be9"
+  integrity sha512-LPRWXY0v5helpVf56YIa0vTQe5TcCtfyYAY2gZOMyB87/4PIWBXpj9MZIZdFwLFhQC1VXpsi7WlZ/LhWe/DEDQ==
   dependencies:
     "@calebboyd/semaphore" "^1.3.1"
     app-builder "^5.2.0"
@@ -8846,7 +8846,7 @@ nexe@3.2.0:
     multistream "^2.1.1"
     ora "^3.4.0"
     pify "^4.0.1"
-    resolve-dependencies "^2.2.2"
+    resolve-dependencies "^2.2.3"
     rimraf "^2.6.3"
 
 nice-try@^1.0.4:
@@ -10958,10 +10958,10 @@ resolve-cwd@^2.0.0:
   dependencies:
     resolve-from "^3.0.0"
 
-resolve-dependencies@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/resolve-dependencies/-/resolve-dependencies-2.2.2.tgz#cf93182396beb605476122128929ff7fea6d965e"
-  integrity sha512-lZARvM5mDaVOBUNam2fbaHYydBBPMlMt6jjlQYvD8D2N//SOlq6iqqFrCWsYkBGYtXgix4EAiTFuZLpt5lXQtA==
+resolve-dependencies@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/resolve-dependencies/-/resolve-dependencies-2.2.3.tgz#f2c12faa67d4140b0dcac1a0a30beca2dacd941d"
+  integrity sha512-EIZcqEE3q+fWNapzpQ2iiCPal+J7TsLfLnoeGq4h5L4GYjnf4xKzVHN7VBjLGgOJwUs/Z+a6nqA80AhwP7IPlQ==
   dependencies:
     "@calebboyd/semaphore" "^1.3.1"
     acorn "^6.0.4"
