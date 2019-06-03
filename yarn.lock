@@ -12908,10 +12908,10 @@ vuepress-plugin-container@^2.0.0:
   dependencies:
     markdown-it-container "^2.0.0"
 
-vuepress@1.0.0-alpha.48:
-  version "1.0.0-alpha.48"
-  resolved "https://registry.yarnpkg.com/vuepress/-/vuepress-1.0.0-alpha.48.tgz#485b908c246297d4210999d7a010105447a6c3f0"
-  integrity sha512-rvEh4xS1Jp7/dC1YsT0VRmn+cP2BLn4KXSKKt9LFnUPgDwi80zARaSIN0NrpaADPQqKb2OxUY1fNV9ectzZ+QA==
+vuepress@1.0.0-alpha.49:
+  version "1.0.0-alpha.49"
+  resolved "https://registry.yarnpkg.com/vuepress/-/vuepress-1.0.0-alpha.49.tgz#dcb5f69c943a9c51baf36c21b14a42acf1bd123d"
+  integrity sha512-koOEkMQ9et5isqk3JxfaD4ieWRqJBORTbLFhgZBZS3c3S/Jt2DZBw9cM5mR3sfRLYo9QaX+rmfGUAtaIoyNVnw==
   dependencies:
     "@vuepress/core" "^1.0.0-alpha.48"
     "@vuepress/theme-default" "^1.0.0-alpha.48"
