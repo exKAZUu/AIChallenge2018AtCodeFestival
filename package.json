@@ -29,7 +29,7 @@
     "lerna": "3.18.3",
     "lint-staged": "9.4.2",
     "nexe": "3.3.2",
-    "node-sass": "4.12.0",
+    "node-sass": "4.13.0",
     "prettier": "1.18.2",
     "renovate-config-exkazuu": "1.0.0",
     "sass-loader": "7.3.1",
