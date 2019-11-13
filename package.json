@@ -27,7 +27,7 @@
     "husky": "3.0.9",
     "jest": "24.9.0",
     "lerna": "3.18.4",
-    "lint-staged": "9.4.2",
+    "lint-staged": "9.4.3",
     "nexe": "3.3.2",
     "node-sass": "4.13.0",
     "prettier": "1.19.1",
