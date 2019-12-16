@@ -42,7 +42,7 @@
     "tslint-microsoft-contrib": "6.2.0",
     "tslint-plugin-prettier": "2.0.1",
     "typescript": "3.7.3",
-    "webpack": "4.41.2",
+    "webpack": "4.41.3",
     "webpack-cli": "3.3.10",
     "webpack-dev-server": "3.9.0",
     "webpack-merge": "4.2.2",
