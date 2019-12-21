@@ -18,7 +18,7 @@
     "@types/seedrandom": "2.4.28",
     "@types/yargs": "13.0.0",
     "copy-webpack-plugin": "5.1.1",
-    "cross-env": "5.2.1",
+    "cross-env": "6.0.3",
     "css-loader": "3.4.0",
     "eslint": "5.16.0",
     "eslint-config-prettier": "6.7.0",
