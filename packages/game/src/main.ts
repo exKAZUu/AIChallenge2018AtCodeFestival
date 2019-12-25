@@ -44,7 +44,7 @@ if (aiCmds.length !== workingDirs.length && workingDirs.length) {
 }
 const pauseCmds = getStringArray(argv.p);
 const unpauseCmds = getStringArray(argv.u);
-if (pauseCmds.length === unpauseCmds.length && (pauseCmds.length !== 0 && pauseCmds.length !== 2)) {
+if (pauseCmds.length === unpauseCmds.length && pauseCmds.length !== 0 && pauseCmds.length !== 2) {
   throw new Error('The both numbers of `-p` and `-u` options must be 0 or 2.');
 }
 

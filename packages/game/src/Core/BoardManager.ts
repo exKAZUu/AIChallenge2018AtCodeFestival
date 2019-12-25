@@ -165,14 +165,12 @@ export class BoardManager {
         const tile = this.board.tileAt({ row: i, col: j });
 
         if (tile && tile.value) {
-          const movable = DIRECTIONS.some(
-            (direction): boolean => {
-              const vector = BoardManager.GET_VECTOR(direction);
-              const tilePosition = { row: i + vector.y, col: j + vector.x };
-              const otherTile = this.board.tileAt(tilePosition);
-              return !!otherTile && otherTile.value === tile.value;
-            }
-          );
+          const movable = DIRECTIONS.some((direction): boolean => {
+            const vector = BoardManager.GET_VECTOR(direction);
+            const tilePosition = { row: i + vector.y, col: j + vector.x };
+            const otherTile = this.board.tileAt(tilePosition);
+            return !!otherTile && otherTile.value === tile.value;
+          });
           if (movable) {
             return true;
           }
