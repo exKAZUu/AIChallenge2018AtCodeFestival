@@ -13,7 +13,7 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@types/jest": "24.9.0",
+    "@types/jest": "24.9.1",
     "@types/node": "13.1.8",
     "@types/seedrandom": "2.4.28",
     "@types/yargs": "13.0.4",
