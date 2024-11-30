@@ -16,7 +16,7 @@
     "@types/jest": "24.9.1",
     "@types/node": "13.13.4",
     "@types/seedrandom": "2.4.28",
-    "@types/yargs": "13.0.4",
+    "@types/yargs": "13.0.12",
     "copy-webpack-plugin": "5.1.1",
     "cross-env": "6.0.3",
     "css-loader": "3.6.0",
